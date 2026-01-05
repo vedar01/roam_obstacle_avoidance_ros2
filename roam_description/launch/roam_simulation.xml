@@ -21,7 +21,7 @@
     </include>    
 
     <node pkg="ros_gz_sim" exec="create" args="-topic robot_description"
-          launch-prefix="bash -c 'sleep 3; $0 $@'" />
+          launch-prefix="bash -c 'sleep 5; $0 $@'" />
 
     <node pkg="ros_gz_bridge" exec="parameter_bridge">
         <param name="config_file" value="$(var gazebo_config_path)" />
