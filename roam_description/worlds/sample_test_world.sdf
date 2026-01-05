@@ -1,0 +1,215 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_groundb_01/4</uri>
+      <name>aws_robomaker_warehouse_GroundB_01</name>
+      <pose>0.47874298691749573 1.7966200113296509 -0.12229912728071213 0 0 -1.5602599873287106</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_wallb_01/4</uri>
+      <name>aws_robomaker_warehouse_WallB_01</name>
+      <pose>0.44281384348869324 1.7462742328643799 0 0 0 -1.5663699769880615</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelff_01/4</uri>
+      <name>aws_robomaker_warehouse_ShelfF_01</name>
+      <pose>-0.49444305896759033 7.2157092094421387 0 0 0 1.5730399726441637</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfd_01/4</uri>
+      <name>aws_robomaker_warehouse_ShelfD_01</name>
+      <pose>-0.92575374666364763 -3.9418452921174989 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfd_01/4</uri>
+      <name>aws_robomaker_warehouse_ShelfD_01_0</name>
+      <pose>-0.82002997398376465 -1.8183238506317139 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfd_01/4</uri>
+      <name>aws_robomaker_warehouse_ShelfD_01_1</name>
+      <pose>-7.1320622291719982 -3.8839539623646382 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfd_01/4</uri>
+      <name>aws_robomaker_warehouse_ShelfD_01_2</name>
+      <pose>-7.1883290677229761 -1.7380612940771025 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfe_01/4</uri>
+      <name>aws_robomaker_warehouse_ShelfE_01</name>
+      <pose>6.4327068328857422 -4.131659984588623 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_shelfe_01/4</uri>
+      <name>aws_robomaker_warehouse_ShelfE_01_0</name>
+      <pose>6.4983019828796387 -1.5006999969482422 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01</name>
+      <pose>6.1689161663101597 2.8802080516153206 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_0</name>
+      <pose>2.7489219806823844 2.8914959001761869 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringc_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringC_01</name>
+      <pose>-0.63412431108557143 2.7661319020260509 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_1</name>
+      <pose>-3.4778177306331028 2.7080187402656519 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringc_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringC_01_0</name>
+      <pose>-6.7146807666144577 2.7079418285211951 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_palletjackb_01/4</uri>
+      <name>aws_robomaker_warehouse_PalletJackB_01</name>
+      <pose>1.9231400489807129 0.96997898817062378 0 0 0 1.2670068740346496</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_palletjackb_01/4</uri>
+      <name>aws_robomaker_warehouse_PalletJackB_01_0</name>
+      <pose>-5.2026138895338914 0.80348634364138505 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/forklift/1</uri>
+      <name>Forklift</name>
+      <pose>6.0739102363586426 0.15473799407482147 0.014986303634941578 0 0 -1.5385100360979209</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_2</name>
+      <pose>0.80501670165347639 7.1095761447189547 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_3</name>
+      <pose>3.006967554613122 7.0462941750044275 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_4</name>
+      <pose>5.0793067361431952 7.0980511814379144 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_5</name>
+      <pose>7.4251164277850163 7.1510465223329351 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_6</name>
+      <pose>-1.4965644218688214 7.0461256445356613 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_7</name>
+      <pose>-3.7309472311157852 7.1540802527282006 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_8</name>
+      <pose>-6.0245772873005743 7.1135490597770064 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/vedar01/.gz/fuel/fuel.gazebosim.org/openrobotics/models/aws_robomaker_warehouse_clutteringa_01/4</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_9</name>
+      <pose>-8.1889702548580132 7.0206996945242937 0 0 0 0</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
