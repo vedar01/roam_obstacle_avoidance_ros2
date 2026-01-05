@@ -28,6 +28,6 @@ ros2 launch roam_description roam_simulation.xml
 - rotate_spd (rad/s)
 - 
 ## Demo
-![ROAM reactive obstacle avoidance](media/roam_demo.gif)
+![ROAM reactive obstacle avoidance](media/roam_full_demo.gif)
 
 Full-length demo video available in `media/roam_demo.mp4`.
